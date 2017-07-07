@@ -5,12 +5,13 @@
 {{! the default angularjs delimeters - https://mustache.github.io/mustache.5.html for more info  }}
 {{=<% %>=}}
 --->
-<body ng-controller="BookKeeperController">
 <%^user%>
 
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="../static/js/bookKeeper-ng-controller.js"></script>-
+<!--<script src="../static/js/bookKeeper-ng-controller.js"></script>-->
 <script src="js/bookKeeper-ng-controller.js"></script>
+<body ng-controller="BookKeeperController">
+
 <h1 style="position: relative; float; center; width:100%; padding:20px;">BookKeeper</h1>
 <h2>Please login:</h2>
 <form action="/login" method="post">
@@ -29,6 +30,10 @@
 </form>
 <div style="position: relative; float; left; width:100%; padding:20px;">
 </div>
+<%/user%>
+
+<%#user%>
+<h2>Welcome, <%userName%></h2>
 <%/user%>
 
 </body>
